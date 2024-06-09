@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Correct Boxicons CDN link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Add FontAwesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        function validatePhoneNumber(input) {
+            const phonePattern = /^[0-9]{10}$/; // Example pattern for a 10-digit number
+            return phonePattern.test(input);
+        }
+
+        function validateForm(event) {
+            const phoneInput = document.getElementById('phone');
+            if (!validatePhoneNumber(phoneInput.value)) {
+                alert('Please enter a valid 10-digit phone number.');
+                event.preventDefault(); // Prevent form submission
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header class="Header">
+        <a href="#" class="logo"><span>Current </span>Hacking</a>
+        <nav class="navbar">
+            <a href="#" class='active'>Portfolio</a>
+            <a href="#">Services</a>
+            <a href="#">Experience</a>
+            <a href="#">Project</a>
+            <a href="#">Education</a>
+        </nav>
+        <a href="#" class="contact">Contact Me</a>
+    </header>
+    <section class="home">
+        <div class="home-content">
+            <h3>Hi</h3>
+            <h1>I'm <span>Ateek Rahman<br></span>a Software Developer</h1>
+            <p>I am a third-year BCA student with proficiency in C, Java, C++, web development, JavaScript, and SQL. My expertise lies in developing robust software
+                 solutions and creating dynamic web applications.</p>
+            <div class="btn-box">
+                <button class="btn-1">Hire Me</button>
+                <button class="btn-2">Experience</button>
+            </div>
+        </div>
+        <div class="img-box">
+            <!-- Updated image source -->
+            <img src="Ateek.jpg" alt="">
+        </div>
+    </section>
+    <section class="about">
+        <div class="about-img">
+            <!-- You can also update this image if needed -->
+            <img src="Atek.jpg" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Software<span>Developer</span></h3>
+            <p>
+                I am a passionate and dedicated software developer with a keen interest in leveraging technology to create innovative solutions. Currently pursuing my Bachelor of Computer Applications (BCA), I am in my third year of studies, eagerly expanding my skills and knowledge in the field of software development.
+                
+                As a software developer, I thrive on the challenge of translating complex ideas into functional and efficient software solutions. My expertise spans multiple programming languages, including C, Java, and C++, as well as web development technologies such as JavaScript. I have a strong foundation in database management with proficiency in SQL, enabling me to design and optimize database systems for various applications.
+                
+                With a creative approach to problem-solving and a meticulous attention to detail, I am committed to delivering high-quality software products that meet the needs of end-users. Whether it's developing desktop applications, crafting interactive web interfaces, or optimizing database performance, I am driven by a passion for excellence and a desire to make a meaningful impact through technology.
+            </p>
+            <a href="#" class="btn-2">Experience</a>
+        </div>
+    </section>
+    <section class="contact-form">
+        <h2 class="contact-me">Contact <span>Me</span></h2>
+        <form action="#" onsubmit="validateForm(event)">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="input-box">
+                <input type="text" id="phone" placeholder="Phone Number" required>
+                <input type="text" placeholder="Subject" required>
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message" class='btn-1'>
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+        </div>
+        <ul class="list">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">@ 2024 Current Hacking | All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>
